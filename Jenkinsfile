@@ -1,7 +1,8 @@
 pipeline {
-agent any
+agent none
 stages {
         stage('Build') {
+		agent { label 'java_agent' }
             steps {
                 echo 'Building..'
 				sh '''
