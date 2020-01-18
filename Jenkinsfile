@@ -76,7 +76,7 @@ stages {
             }
         }
         stage('test') {
-		agent { label 'java_agent' }
+		agent { label 'pramod_node' }
             steps {
                 echo 'Testing....'
 				sh '''
