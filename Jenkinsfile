@@ -2,7 +2,7 @@ pipeline {
 agent none
 stages {
         stage('Build') {
-		agent { label 'java_agent' }
+		agent { label 'pramod_node' }
             steps {
                 echo 'Building..'
 				sh '''
@@ -76,7 +76,7 @@ stages {
             }
         }
         stage('test') {
-		agent { label 'pramod_node' }
+		agent { label 'java_agent' }
             steps {
                 echo 'Testing....'
 				sh '''
