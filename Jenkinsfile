@@ -1,8 +1,8 @@
 pipeline {
-agent none
+agent any
 stages {
         stage('Build') {
-		agent { label 'pramod_node' }
+		
             steps {
                 echo 'Building..'
 				sh '''
@@ -41,7 +41,7 @@ stages {
             }
         }
         stage('deploy') {
-		agent { label 'master' }
+		
             steps {
                 echo 'Deploying to TEST environment..'
 				sh '''
@@ -76,7 +76,7 @@ stages {
             }
         }
         stage('test') {
-		agent { label 'java_agent' }
+		
             steps {
                 echo 'Testing....'
 				sh '''
