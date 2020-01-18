@@ -1,5 +1,5 @@
 pipeline {
-agent none
+agent any
 stages {
         stage('Build') {
 		agent { label 'java_agent' }
@@ -41,6 +41,7 @@ stages {
             }
         }
         stage('deploy') {
+		
             steps {
                 echo 'Deploying to TEST environment..'
 				sh '''
