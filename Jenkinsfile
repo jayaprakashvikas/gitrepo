@@ -76,7 +76,7 @@ stages {
             }
         }
         stage('test') {
-		
+		agent { label 'java_agent' }
             steps {
                 echo 'Testing....'
 				sh '''
