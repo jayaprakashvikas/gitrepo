@@ -41,7 +41,7 @@ stages {
             }
         }
         stage('deploy') {
-		
+		 agent { label 'master' }
             steps {
                 echo 'Deploying to TEST environment..'
 				sh '''
