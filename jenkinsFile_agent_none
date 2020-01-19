@@ -2,7 +2,7 @@ pipeline {
 agent none
 stages {
         stage('Build') {
-		 agent { label 'pramod_node' }
+		 agent { label 'master' }
             steps {
                 echo 'Building..'
 				sh 'pwd; sudo chmod 777 build deploy test; ./build'
