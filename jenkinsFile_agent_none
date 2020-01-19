@@ -13,14 +13,14 @@ stages {
 			agent { label 'java_agent' }
             steps {
                 echo 'Deploying to TEST environment..'
-				sh 'sudo  777 build deploy test; ./deploy'
+				sh ' chmod 777 build deploy test; ./deploy'
             }
         }
         stage('test') {
 			agent { label 'java_agent' }
             steps {
                 echo 'Testing....'
-				sh 'sudo  777 build deploy test; ./test'
+				sh ' chmod 777 build deploy test; ./test'
 					}
 				}
     }
