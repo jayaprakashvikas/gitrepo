@@ -1,8 +1,9 @@
 pipeline {
 agent none
-parallel {
-stages {
 
+stages {
+stage ('all stage'){
+parallel {
         stage('Build') {
 		 agent { label 'master' }
             steps {
@@ -26,5 +27,6 @@ stages {
 					}
 				}
     }
+}
 }
 }
